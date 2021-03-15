@@ -1,0 +1,213 @@
+:root {
+  --grayish-blue: hsl(237, 18%, 59%);
+  --soft-red: hsl(345, 95%, 68%);
+  --white: hsl(0, 0%, 100%);
+  --dark-desatured-blue: hsl(236, 21%, 26%);
+  --very-dark-blue: hsl(235, 16%, 14%);
+  --very-dark-blue-mostly-black: hsl(234, 17%, 12%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 14px;
+}
+main {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("../../images/bg-stars.svg"),
+    url("./../../images/pattern-hills.svg"), var(--very-dark-blue);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100vw 70vh, cover 30vh;
+  background-position: top, bottom right;
+  letter-spacing: 6px;
+  position: relative;
+}
+main h1 {
+  color: var(--white);
+  font-size: 1.25rem;
+  text-align: center;
+  margin-top: 100px;
+}
+main .times {
+  display: flex;
+  text-align: center;
+  margin-top: 80px;
+  z-index: 3;
+}
+main .times .time-item {
+  width: 150px;
+  height: 150px;
+  margin: 0 15px 25px;
+  background-color: var(--dark-desatured-blue);
+  position: relative;
+  z-index: -2;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 10px 1px var(--very-dark-blue-mostly-black);
+  /* animation: animation-rotate 1s infinite; */
+}
+
+@keyframes animation-rotate {
+  from {
+    transform: rotateX(0);
+  }
+  to {
+    transform: rotateX(-90deg);
+  }
+}
+
+main .time-item span {
+  font-size: 5.5rem;
+  letter-spacing: 0px;
+  color: var(--soft-red);
+  text-align: center;
+  line-height: 150px;
+  z-index: 1;
+}
+main .time-item::before {
+  content: "";
+  width: 100%;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+main .time-item .points {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+main .time-item .point {
+  width: 6px;
+  height: 12px;
+  background-color: var(--very-dark-blue-mostly-black);
+  z-index: 5;
+}
+main .time-item .point-left {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+main .time-item .point-right {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+main .times .time-text {
+  color: var(--grayish-blue);
+}
+main .redes-social {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 40px;
+}
+main .redes-social ul {
+  list-style: none;
+  display: flex;
+}
+main .redes-social li {
+  margin: 0px 15px;
+}
+.redes-social svg:hover path {
+  fill: var(--soft-red);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  letter-spacing: 0;
+  color: var(--grayish-blue);
+  position: absolute;
+  bottom: 10px;
+}
+.attribution a {
+  color: var(--soft-red);
+}
+
+@media (max-width: 800px) {
+  main .redes-social {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 750px) {
+  main .times .time-item {
+    width: 120px;
+    height: 120px;
+  }
+  main .time-item span {
+    font-size: 4.5rem;
+    line-height: 120px;
+  }
+  main .redes-social {
+    margin-top: 90px;
+  }
+}
+
+@media (max-width: 600px) {
+  main h1 {
+    font-size: 1rem;
+  }
+  main .times .time-item {
+    width: 110px;
+    height: 110px;
+  }
+  main .time-item span {
+    font-size: 4rem;
+    line-height: 110px;
+  }
+  main .times .time-text {
+    font-size: 0.6rem;
+  }
+  main .times .time-item {
+    margin: 0 5px 25px;
+  }
+}
+
+@media (max-width: 500px) {
+  main .times .time-item {
+    width: 90px;
+    height: 90px;
+  }
+  main .time-item span {
+    font-size: 3rem;
+    line-height: 90px;
+  }
+  main .times .time-text {
+    font-size: 0.5rem;
+  }
+}
+@media (max-width: 400px) {
+  main .times .time-item {
+    width: 65px;
+    height: 65px;
+  }
+  main .time-item span {
+    font-size: 2.5rem;
+    line-height: 65px;
+  }
+  main .times {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  main .times .time {
+    margin-top: 10px;
+  }
+  main .times .time-text {
+    letter-spacing: 2px;
+  }
+}
