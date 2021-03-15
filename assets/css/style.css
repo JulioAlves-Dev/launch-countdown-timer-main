@@ -14,18 +14,18 @@
 body {
   font-family: "Red Hat Text", sans-serif;
   font-size: 14px;
+  overflow-x: hidden;
 }
 main {
   width: 100vw;
-  min-height: 100vh;
+  min-height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url("../../images/bg-stars.svg"),
-    url("./../../images/pattern-hills.svg"), var(--very-dark-blue);
-  background-repeat: no-repeat, no-repeat;
-  background-size: 100vw 70vh, 100vw 30vh;
-  background-position: top, bottom right;
+  background: url("../../images/bg-stars.svg"), var(--very-dark-blue);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
   letter-spacing: 6px;
   position: relative;
 }
@@ -98,24 +98,35 @@ main .time-item .point-right {
 main .times .time-text {
   color: var(--grayish-blue);
 }
-main .redes-social {
+
+footer {
+  width: 100vw;
+  min-height: 200px;
+  position: relative;
+  background: url("./../../images/pattern-hills.svg"), var(--very-dark-blue);
+  background-repeat: no-repeat;
+  background-size: 100vw cover;
+  background-position: bottom right;
+}
+footer .redes-social {
   width: 100%;
   display: flex;
   justify-content: center;
   position: absolute;
   bottom: 40px;
 }
-main .redes-social ul {
+footer .redes-social ul {
   list-style: none;
   display: flex;
 }
-main .redes-social li {
+footer .redes-social li {
   margin: 0px 15px;
 }
 .redes-social svg:hover path {
   fill: var(--soft-red);
 }
 .attribution {
+  width: 100%;
   font-size: 11px;
   text-align: center;
   letter-spacing: 0;
@@ -128,9 +139,6 @@ main .redes-social li {
 }
 
 @media (max-width: 800px) {
-  main .redes-social {
-    margin-top: 50px;
-  }
 }
 
 @media (max-width: 750px) {
@@ -141,9 +149,6 @@ main .redes-social li {
   main .time-item span {
     font-size: 4.5rem;
     line-height: 120px;
-  }
-  main .redes-social {
-    margin-top: 90px;
   }
 }
 
