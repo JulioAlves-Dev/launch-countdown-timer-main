@@ -24,8 +24,8 @@ Os usuários devem ser capazes de:
 
 ### Screenshot
 
-![](./screenshots/screenshot_desktop.png)
-![](./screenshots/screenshot_mobile.png)
+![](./screenshots/screenshots_desktop.png)
+![](./screenshots/screenshots_mobile.png)
 
 ### Links
 
